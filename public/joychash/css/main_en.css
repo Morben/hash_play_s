@@ -1,0 +1,2348 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1b2354;
+  font-family: "Microsoft YaHei", "微软雅黑";
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+}
+/*body {
+  background: url(../img/firstDivBg.jpg) no-repeat top center;
+}*/
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+i,
+em {
+  font-style: normal;
+}
+button {
+  font-family: "Microsoft YaHei", "微软雅黑";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.block {
+  display: table;
+  width: 100%;
+}
+.block .mainDiv {
+  width: 1250px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*电脑版隐藏手机版内容*/
+@media (min-width: 1023px) {
+  .mdiv {
+    display: none !important;
+  }
+}
+
+/*提示层*/
+#tipDiv {
+  display: table;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-75%);
+}
+#tipDiv {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(#e4307a, #e72945);
+  transition: all 1s;
+  opacity: 0;
+}
+
+/*侧边栏*/
+.sideDiv {
+  position: fixed;
+  display: flex;
+  top: 50%;
+  right: 36px;
+  transform: translate(0, -50%);
+  z-index: 99;
+}
+.sideDiv {
+  width: 130px;
+  height: 360px;
+  padding: 70px 30px;
+  border-radius: 62px;
+  box-sizing: border-box;
+  background: url("../img/side_bg.png")/*tpa=http://www.mghx77.com/joychash/img/side_bg.png*/ no-repeat center;
+  background-size: 100% 100%;
+}
+
+.sideDiv ul li {
+  font-size: 12px;
+  margin-bottom: 65px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.sideDiv ul li:hover {
+  opacity: 1;
+}
+.sideDiv ul li i {
+  display: block;
+  margin: auto auto 2px auto;
+  width: 68px;
+  height: 54px;
+}
+
+.sideDiv ul li.account i {
+  background: url("../img/game_icon.png")/*tpa=http://www.mghx77.com/joychash/img/game_icon.png*/ no-repeat center;
+  background-size: 100%;
+}
+.sideDiv ul li.service i {
+  background: url("../img/service_icon.png")/*tpa=http://www.mghx77.com/joychash/img/service_icon.png*/ no-repeat center;
+  background-size: 100%;
+}
+
+/*浮窗*/
+.winMask {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 555;
+  display: none;
+}
+.winDiv {
+  display: table;
+  width: 550px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 666;
+  display: none;
+}
+.winDiv {
+  background-image: linear-gradient(150deg, #5f2656, #3e1d46);
+  padding: 20px;
+  border-radius: 20px;
+}
+.winDiv h2 {
+  font-size: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 0 18px 15px;
+  margin: 0 -12px;
+}
+.winDiv .colse {
+  background: url("../img/winColse.png")/*tpa=http://www.mghx77.com/joychash/img/winColse.png*/;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  position: absolute;
+}
+.winDiv .colse {
+  margin-left: 520px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.winDiv .colse:hover {
+  opacity: 1;
+}
+.winDiv .body {
+  margin-top: 20px;
+}
+
+.winDiv .qr em {
+  display: block;
+  background: url("../img/qrbg.png")/*tpa=http://www.mghx77.com/joychash/img/qrbg.png*/ no-repeat;
+  width: 300px;
+  height: 300px;
+  background-size: 100% 100%;
+  margin: 0px auto auto auto;
+}
+.winDiv .qr em i {
+  float: left;
+  margin: 68px 0 0 83px;
+  width: 132px;
+  height: 132px;
+  border-radius: 30px;
+}
+.winDiv .qr em i {
+  background: url("../img/qrcode.png")/*tpa=http://www.mghx77.com/joychash/img/qrcode.png*/ no-repeat;
+  background-size: 100% 100%;
+}
+.winDiv .qr span {
+  display: block;
+  text-align: center;
+  margin: -30px 0 30px 0;
+  font-size: 18px;
+}
+
+.winDiv .account em {
+  display: block;
+  text-align: center;
+  margin: 60px 0 50px 0;
+  font-size: 18px;
+}
+.winDiv .account button {
+  display: block;
+  margin: 30px auto;
+  background-image: linear-gradient(#e13280, #e72946);
+  height: 50px;
+  border-radius: 40px;
+  width: 130px;
+}
+.winDiv .account button {
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  outline: none;
+}
+.winDiv .account button:hover {
+  background-image: linear-gradient(#ff42b1, #ff3956);
+}
+
+.winDiv .service .email {
+  padding-left: 33px;
+  line-height: 1.5;
+  margin-left: 138px;
+  margin-top: 30px;
+  background: url("../img/whyEmailIcon.png")/*tpa=http://www.mghx77.com/joychash/img/whyEmailIcon.png*/ no-repeat;
+  background-size: 24px;
+}
+.winDiv .service .email span {
+  text-decoration: underline;
+  color: #ffea00;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.winDiv .service .email span:hover {
+  color: #f9db50;
+}
+.winDiv .service ul {
+  margin: 50px 0 50px 120px;
+  display: table;
+}
+.winDiv .service ul div {
+  float: left;
+  width: 150px;
+  text-align: center;
+}
+.winDiv .service ul div i {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: auto auto 10px auto;
+}
+.winDiv .service ul div i {
+  background: url("../img/whyTGIcon.png")/*tpa=http://www.mghx77.com/joychash/img/whyTGIcon.png*/;
+  background-size: cover;
+}
+.winDiv .service ul div.fb i {
+  background-image: url("../img/whyFbIcon.png")/*tpa=http://www.mghx77.com/joychash/img/whyFbIcon.png*/;
+}
+
+.winDiv .soft .body {
+  line-height: 2;
+}
+.winDiv .soft .body ul {
+  padding: 0 10px 30px 10px;
+}
+.winDiv .soft .body li strong {
+  font-size: 18px;
+}
+.winDiv .soft .body li.link {
+  padding-left: 30px;
+}
+.winDiv .soft .body li.link a {
+  color: #c39a66;
+}
+.winDiv .soft .body li.link a:hover {
+  color: #feca88;
+}
+
+/*顶部导航条*/
+.headNav {
+  background-color: rgba(56, 52, 64, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 88;
+  transition: all 1s;
+}
+.headNav.in {
+  background-color: rgba(56, 52, 64, 0.3);
+}
+.headNav .mainDiv.pdiv {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 0 100px;
+  font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.headNav .logo {
+  float: left;
+  width: 245px;
+  height: 43px;
+  background: url("../img/logo.png")/*tpa=http://www.mghx77.com/joychash/img/logo.png*/ no-repeat;
+  background-size: 100%;
+}
+.headNav ul li {
+  float: left;
+  margin-left: 30px;
+  font-size: 14px;
+}
+.headNav ul li a {
+  transition: all 0.5s;
+}
+.headNav ul li a:hover,
+.headNav ul li a.active {
+  color: #ffea00;
+}
+
+.firstWrap {
+  background: url("../img/firstBg_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/firstBg.png*/ no-repeat center 0px;
+  background-size: 100%;
+}
+/*首屏*/
+.firstDiv {
+  height: 700px;
+}
+.firstDiv .mainDiv {
+  height: 700px;
+}
+.firstDiv h3,
+.firstDiv .slogan,
+.firstDiv .qr,
+.firstDiv .hashInfo,
+.firstDiv .coins {
+  position: absolute;
+}
+.firstDiv h3 {
+  margin: 150px 0 0 16px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 12px;
+  width: 800px;
+}
+
+.firstDiv .slogan {
+  margin: 230px 0 0 0px;
+  font-size: 88px;
+  font-weight: 500;
+  width: 880px;
+}
+.firstDiv .slogan .slogo {
+  width: 647px;
+  height: 89px;
+  position: relative;
+}
+.firstDiv .slogan .slogo img {
+  position: absolute;
+  height: 100%;
+  bottom: 0px;
+}
+.firstDiv .slogan span {
+  float: left;
+  height: 1px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.firstDiv .slogan span img {
+  width: 227px;
+  height: 121px;
+}
+.firstDiv .qr {
+  margin: 473px 0 0 0px;
+  background: url("../img/qrbg.png")/*tpa=http://www.mghx77.com/joychash/img/qrbg.png*/ no-repeat;
+  width: 220px;
+  height: 220px;
+  background-size: 100% 100%;
+}
+.firstDiv .qr i {
+  display: block;
+  margin: 60px 0 0 58px;
+  width: 101px;
+  height: 101px;
+}
+.firstDiv .qr i {
+  background: url("../img/QR_Code/qrcode.png")/*tpa=http://www.mghx77.com/joychash/img/QR_Code/qrcode.png*/ no-repeat;
+  background-size: 100% 100%;
+}
+.firstDiv .qr img {
+  display: block;
+  margin: 60px 0 0 58px;
+  width: 101px;
+  height: 101px;
+}
+.firstDiv .hashInfo {
+  margin: 520px 0 0 250px;
+  width: 520px;
+  height: 110px;
+  background: rgba(58, 51, 73, 1);
+  background: #542760;
+  border-radius: 80px;
+  z-index: 10;
+  border: 1px solid #e72944;
+}
+.firstDiv .hashInfo .text {
+  float: left;
+  margin: 18px 0 0 22px;
+}
+.firstDiv .hashInfo .text h4 {
+  margin-bottom: 5px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.firstDiv .hashInfo .text span {
+  font-size: 14px;
+}
+.firstDiv .hashInfo .text i {
+  color: #ffea00;
+}
+.firstDiv .hashInfo .copyBut {
+  float: right;
+  background-image: linear-gradient(#e72944, #e13384);
+  height: 70px;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-right: 15px;
+  width: 170px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.firstDiv .hashInfo .copyBut:hover {
+  background-image: linear-gradient(#ff3b5d, #ff4296);
+}
+
+/*规则*/
+.ruleDiv {
+  background: #171e48;
+  margin: 0 auto;
+}
+.ruleDiv .title {
+  margin: 30px auto;
+  background: url("../img/ruleTitle_en.png")/*tpa=http://www.mghx77.com/joychash/img/ruleTitle.png*/ no-repeat center;
+  width: 328px;
+  height: 123px;
+  background-size: 100% 100%;
+}
+.ruleDiv .tab {
+  display: flex;
+  height: 60px;
+  padding-right: 100px;
+  padding-left: 245px;
+}
+.ruleDiv .tab .tabItem {
+  width: 320px;
+  height: 60px;
+  color: #8f91aa;
+  font-size: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+.ruleDiv .tab .tabItem.active {
+  width: 120px;
+  height: 38px;
+  background: linear-gradient(90deg, #e72944, #e13384);
+  border-radius: 60px;
+  color: #fff;
+  line-height: 38px;
+  position: relative;
+}
+.ruleDiv .tab .tabItem.active::after {
+  content: " ";
+  width: 17px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -22px;
+  background: url("../img/rule_1_02.png")/*tpa=http://www.mghx77.com/joychash/img/rule_1_02.png*/ no-repeat center;
+  background-size: 100%;
+}
+.ruleDiv .mainDiv .show {
+  padding: 0 50px 50px 50px;
+}
+
+.ruleDiv .mainDiv .show .blocks .item {
+  display: flex;
+  justify-content: space-between;
+  background: url("../img/rule_bg.png")/*tpa=http://www.mghx77.com/joychash/img/rule_bg.png*/ no-repeat center;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  padding: 30px;
+  height: 500px;
+  box-sizing: border-box;
+}
+.ruleDiv .qrcodeBlock,
+.ruleDiv .ruleBlock {
+  flex: 1;
+}
+.ruleDiv .qrcodeBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.ruleDiv .qrcodeBlock .divImg {
+    border-width: 10px;
+    border-color: #ffffff;
+    border-style: double;
+    border-radius: 14px;
+    height: 230px;
+    margin-bottom: 10px;
+}
+.ruleDiv .qrcodeBlock .biaoti{
+	font-weight:bold;
+	color:#FF0;
+	margin-right:10px;
+	}
+.ruleDiv .qrcodeBlock .zhengwen{
+	text-align:center;
+	font-size:14px;
+	}
+
+.ruleDiv .qrcodeBlock .qrcodeHash {
+    font-size: 14px;
+    padding-top: 10px;
+}
+    
+#hashAdd {
+  font-size: 14px;
+  padding-top: 10px;
+}
+.ruleDiv .qrcodeBlock img {
+  width: 230px;
+  margin-bottom: 20px;
+}
+.ruleDiv .qrcodeBlock .copyBut {
+  cursor: pointer;
+  width: 120px;
+  height: 34px;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  text-align: center;
+  line-height: 34px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.ruleDiv .ruleBlock {
+  background: url("../img/rule_2.png")/*tpa=http://www.mghx77.com/joychash/img/rule_2.png*/ no-repeat center;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  padding: 40px;
+  width: 476px;
+  height: 432px;
+  box-sizing: border-box;
+}
+.ruleDiv .ruleBlock h3 {
+  font-size: 18px;
+  color: #ffea00;
+  padding-bottom: 5px;
+  font-weight: bolder;
+}
+.ruleDiv .ruleBlock .desc {
+  font-size: 12px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.ruleDiv .ruleBlock .cont {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.5;
+}
+.ruleDiv .ruleBlock .cont span {
+  color: #e7489b;
+  font-size:18px;
+  font-weight: bolder;
+}
+.ruleDiv .ruleBlock .weizhongjiang {
+  padding-top: 30px;
+}
+.ruleDiv .ruleBlock .money {
+  padding-top: 10px;
+}
+.ruleDiv .ruleBlock .red {
+  font-size: 12px;
+  color: #e7489b;
+  padding-bottom: 20px;
+}
+.ruleDiv .ruleBlock .tuchu {
+  font-size: 12px;
+  color: #e7489b;
+}
+.ruleDiv .ruleBlock .white {
+  font-size: 12px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.ruleDiv .show .example {
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+.ruleDiv .show .example li {
+  width: 285px;
+  height: 390px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 15px;
+  padding: 20px 30px;
+  padding-top: 10px;
+  line-height: 1.5;
+}
+.ruleDiv .show .example li:nth-of-type(1) {
+  background: url("../img/rule_3.png")/*tpa=http://www.mghx77.com/joychash/img/rule_3.png*/ no-repeat center;
+  background-size: 100% 100%;
+}
+.ruleDiv .show .example li:nth-of-type(2) {
+  background: url("../img/rule_4.png")/*tpa=http://www.mghx77.com/joychash/img/rule_4.png*/ no-repeat center;
+  background-size: 100% 100%;
+}
+.ruleDiv .show .example li:nth-of-type(3) {
+  background: url("../img/rule_5.png")/*tpa=http://www.mghx77.com/joychash/img/rule_5.png*/ no-repeat center;
+  background-size: 100% 100%;
+}
+.ruleDiv .show .example li:nth-of-type(4) {
+  background: url("../img/rule_6.png")/*tpa=http://www.mghx77.com/joychash/img/rule_6.png*/ no-repeat center;
+  background-size: 100% 100%;
+}
+.ruleDiv .show .example li > div {
+  padding-bottom: 0px;
+}
+.ruleDiv .show .example .exampleTitle {
+  font-size: 20px;
+  text-align: center;
+}
+.ruleDiv .show .example .num {
+  color: #ffea00;
+  font-weight: bolder;
+}
+.ruleDiv .show .example .num1 {
+  font-weight: bolder;
+}
+.ruleDiv .show .example .hash {
+  color: #e7489b;
+  padding: 10px 0;
+  font-weight: bolder;
+}
+.ruleDiv .show .example .dyh {
+  padding-top: 10px;
+}
+.ruleDiv .show .example .award {
+  color: #fc155c;
+  padding-right: 5px;
+  font-weight: bolder;
+}
+.ruleDiv .show .example .unaward {
+  color: #13ca5c;
+  padding-right: 5px;
+  font-weight: bolder;
+}
+
+/*参与流程*/
+/*参与流程*/
+.circuitDiv {
+  /*background: #171e48;*/
+  padding-bottom: 80px;
+}
+.circuitDiv .title {
+  width: 476px;
+  height: 124px;
+  margin: 80px auto 60px;
+  background: url("../img/circuitTitle_en.png")/*tpa=http://www.mghx77.com/joychash/img/circuitTitle.png*/;
+  background-size: 100% 100%;
+}
+.circuitDiv .process.pdiv {
+  width: 1198px;
+  height: 133px;
+  margin: 0px auto 30px;
+}
+.circuitDiv .process ul.pdiv {
+  width: 1198px;
+  height: 133px;
+  display: flex;
+  background: url("../img/process_4.png")/*tpa=http://www.mghx77.com/joychash/img/process_4.png*/ no-repeat left top;
+  background-size: 100%;
+}
+.circuitDiv .process ul.pdiv li {
+  color: #fff;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  padding-right: 100px;
+  cursor: pointer;
+}
+.circuitDiv .process.pdiv ul li:nth-of-type(2) {
+  flex: 4;
+}
+.circuitDiv .process ul.pdiv li:nth-of-type(3) {
+  flex: 2;
+}
+.circuitDiv .process ul.pdiv li span {
+  color: #ffea00;
+}
+.circuitDiv .show {
+  display: flex;
+  width: 1198px;
+  margin: 0 auto;
+  /*background: url(../img/process_3.jpg) no-repeat left bottom;*/
+  background-size: 60%;
+  margin-top: 30px;
+}
+.circuitDiv .stepBlock {
+  flex: 1;
+}
+.circuitDiv .stepBlock h3 {
+  color: #e32966;
+  font-size: 44px;
+  font-weight: bolder;
+  position: relative;
+  padding-bottom: 30px;
+}
+.circuitDiv .stepBlock h3::after {
+  content: " ";
+  background: url("../img/Live_Data3.png")/*tpa=http://www.mghx77.com/joychash/img/Live_Data3.png*/ no-repeat center center;
+  background-size: 100%;
+  width: 300px;
+  height: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+.circuitDiv .stepBlock ul li {
+  color: #fff;
+  font-size: 22px;
+  line-height: 40px;
+}
+.circuitDiv .stepBlock ul li span {
+  color: #e42956;
+}
+.circuitDiv .stepBlock ul li.example {
+  font-size: 20px;
+  padding: 30px 0 20px;
+}
+.circuitDiv .stepBlock ul li.desc {
+  font-size: 12px;
+}
+.circuitDiv .blocks {
+  width: 730px;
+  height: 580px;
+  margin-left: 70px;
+  border-radius: 10px;
+  background: url("../img/blockBg.png")/*tpa=http://www.mghx77.com/joychash/img/blockBg.png*/ no-repeat center;
+  background-size: 100% 100%;
+  margin-right: 30px;
+}
+.circuitDiv .blocks h4 {
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+.circuitDiv .blocks h4 span {
+  color: #ffea00;
+}
+.circuitDiv .blocks .body {
+  width: 700px;
+  height: 500px;
+  border-radius: 20px;
+  margin: 8px 0 0 20px;
+}
+
+.circuitDiv .blocks .item {
+  display: none;
+}
+
+.circuitDiv .blocks table {
+  width: 100%;
+  border-radius: 15px;
+}
+.circuitDiv .blocks table {
+  border-collapse: collapse;
+  border: 0;
+}
+.circuitDiv .blocks table th,
+table td {
+  border: 0;
+  text-align: left;
+  text-align: center;
+}
+.circuitDiv .blocks table th {
+  border: 0px solid #f5f5f5;
+  padding: 6px 0;
+}
+.circuitDiv .blocks table tr {
+  position: relative;
+}
+.circuitDiv .blocks table tr:not(:nth-of-type(1))::after {
+  content: " ";
+  background: url("../img/Live_Data3.png")/*tpa=http://www.mghx77.com/joychash/img/Live_Data3.png*/ no-repeat center center;
+  background-size: 100%;
+  width: 90%;
+  height: 4px;
+  position: absolute;
+  right: 5%;
+  left: 5%;
+  bottom: 0;
+}
+
+.circuitDiv .blocks table td {
+  padding: 8px 5px;
+}
+.circuitDiv .blocks table td img {
+  width: 100px;
+}
+.circuitDiv .blocks table td a {
+  cursor: pointer;
+}
+.circuitDiv .blocks table td {
+  padding: 18px 5px;
+  position: relative;
+}
+.circuitDiv .blocks table .tip {
+  position: absolute;
+  color: #eac104;
+  background: #e42956;
+  padding: 2px 5px;
+  border-radius: 5px;
+  right: -10px;
+  top: 0px;
+  font-size: 12px;
+}
+.circuitDiv .blocks .b3 .text {
+  display: flex;
+  align-items: center;
+}
+
+.circuitDiv .blocks .b3 .text span {
+  width: 182px;
+}
+
+.circuitDiv .blocks .b3 .copyBut {
+  display: block;
+  color: #e72a48;
+  width: 50px;
+  height: 24px;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: 1px solid #e72a48;
+  background: transparent;
+}
+.circuitDiv .blocks .b3 .copyBut:hover {
+  color: #fff;
+  background-image: linear-gradient(#ec2544, #e3327a);
+}
+.circuitDiv .blocks .b3 .red {
+  color: #ff062d;
+    font-weight: bolder;
+    font-size: 18px;
+}
+/* 实时数据 */
+.nowDataDiv {
+  background: #1b2354;
+  position: relative;
+  z-index: 3;
+}
+.nowDataDiv .title {
+  width: 480px;
+  height: 123px;
+  margin: 80px auto 50px;
+  background: url("../img/Live_Data.png")/*tpa=http://www.mghx77.com/joychash/img/Live_Data.png*/ no-repeat;
+  background-size: 100% 100%;
+}
+.nowDataDiv .blocks {
+  width: 1200px;
+  height: 593px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: url("../img/Live_Data1.png")/*tpa=http://www.mghx77.com/joychash/img/Live_Data1.png*/ no-repeat center;
+  background-size: 100% 100%;
+  padding: 40px;
+}
+
+.nowDataDiv .blocks .body {
+  width: 100%;
+  height: 460px;
+  border-radius: 20px;
+  margin: 10px 0 0;
+}
+.nowDataDiv .blocks .body .tableBox {
+  height: 430px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.nowDataDiv .blocks table {
+  width: 100%;
+  border-radius: 15px;
+}
+.nowDataDiv .blocks table {
+  border-collapse: collapse;
+  border: 0;
+}
+.nowDataDiv .blocks table th,
+table td {
+  border: 0;
+  text-align: center;
+}
+.nowDataDiv .blocks table th {
+  border: 0px solid #f5f5f5;
+  padding: 20px 0;
+}
+.nowDataDiv .blocks table tr {
+  position: relative;
+}
+.nowDataDiv .blocks table tr:not(:nth-of-type(1))::after {
+  content: " ";
+  background: url("../img/Live_Data3.png")/*tpa=http://www.mghx77.com/joychash/img/Live_Data3.png*/ no-repeat center center;
+  background-size: 100%;
+  height: 4px;
+  position: absolute;
+  right: 50px;
+  left: 30px;
+  bottom: 0;
+}
+
+.nowDataDiv .blocks table td {
+  padding: 30px 5px;
+}
+
+.nowDataDiv .blocks table td.num {
+  color: #e42956;
+}
+/*兑换*/
+.exchangeDiv {
+  background: #1b2354;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 3;
+}
+.exchangeDiv .nowDataDiv_bg {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 1;
+  background: url("../img/Live_Data2.jpg")/*tpa=http://www.mghx77.com/joychash/img/Live_Data2.jpg*/ no-repeat center;
+  background-size: 100%;
+}
+.exchangeDiv .title {
+  width: 562px;
+  height: 164px;
+  margin: 80px auto 50px;
+  background: url("../img/exchangeTitle.png")/*tpa=http://www.mghx77.com/joychash/img/exchangeTitle.png*/;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.exchangeDiv .form {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.exchangeDiv .form .input,
+.exchangeDiv .form .text {
+  background: #fff;
+  width: 290px;
+  height: 60px;
+  border-radius: 60px;
+  line-height: 66px;
+  border: 1px solid #e23283;
+  display: flex;
+  align-items: center;
+}
+.exchangeDiv .form .input {
+  padding-left: 30px;
+}
+.exchangeDiv .form .text {
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+}
+.exchangeDiv .form .text i {
+  width: 60px;
+  height: 60px;
+  background: url("../img/exchange_4.png")/*tpa=http://www.mghx77.com/joychash/img/exchange_4.png*/ no-repeat center;
+  background-size: 50%;
+  display: inline-block;
+}
+.exchangeDiv .form .input span {
+  font-weight: 700;
+  font-size: 28px;
+  color: #e23283;
+}
+.exchangeDiv .form .input input {
+  font-size: 26px;
+  width: 160px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+}
+
+.exchangeDiv .form button {
+  width: 176px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  background-image: linear-gradient(#e13384, #e72944);
+  border: 0;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.exchangeDiv .form button:hover {
+  background: linear-gradient(
+    134.3deg,
+    rgba(246, 57, 144, 1) 100%,
+    rgba(231, 41, 69, 1) 100%
+  );
+}
+
+.exchangeDiv .note {
+  margin: 40px 7%;
+  width: 1074px;
+  height: 358px;
+  box-sizing: border-box;
+  background: url("../img/exchange_1.png")/*tpa=http://www.mghx77.com/joychash/img/exchange_1.png*/ no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.exchangeDiv .note .qrInfo {
+  width: 500px;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+.exchangeDiv .note .qrInfo .qr i {
+  width: 305px;
+  height: 305px;
+  border-radius: 10px;
+  display: inline-block;
+  background: url("../img/QR_Code/exchange_3.png")/*tpa=http://www.mghx77.com/joychash/img/QR_Code/exchange_3.png*/ no-repeat center;
+  background-size: 100%;
+}
+.exchangeDiv .note .qrInfo .qr img {
+  width: 305px;
+  height: 305px;
+  border-radius: 10px;
+  display: inline-block;
+  /* background: url(../img/QR_Code/exchange_3.png) no-repeat center; */
+  background-size: 100%;
+}
+.exchangeDiv .note .hashInfo {
+  width: 500px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 30px;
+  line-height: 2.3;
+  background: url("../img/exchange_2.png")/*tpa=http://www.mghx77.com/joychash/img/exchange_2.png*/ no-repeat center;
+  background-size: 100%;
+  position: relative;
+}
+.exchangeDiv .note .hashInfo h4 {
+  font-size: 22px;
+}
+.exchangeDiv .note .hashInfo button {
+  position: absolute;
+  border: 0;
+  width: 50px;
+  height: 24px;
+  border-radius: 24px;
+  border: 0px solid #b6b6b6;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px auto;
+  outline: none;
+  background: linear-gradient(134.3deg, #e72944 0%, #e13384 100%);
+  right: 20px;
+  bottom: 15px;
+}
+
+.exchangeDiv .note .hashInfo button:hover {
+  background: linear-gradient(
+    134.3deg,
+    rgba(224, 51, 141, 0.6) 50%,
+    rgba(224, 51, 131, 0.6) 78%
+  );
+}
+.exchangeDiv .note .text {
+  font-size: 22px;
+  line-height: 2;
+  padding-top: 30px;
+}
+/*为什么*/
+.whyDiv {
+  padding-bottom: 80px;
+  background: #171e48;
+}
+.whyDiv .title {
+  width: 670px;
+  height: 126px;
+  margin: 80px auto 0px auto;
+  background: url("../img/aboutTitle_en.png")/*tpa=http://www.mghx77.com/joychash/img/aboutTitle.png*/;
+  background-size: 100% 100%;
+}
+.whyDiv .show {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.whyDiv .show::-webkit-scrollbar {
+  display: none;
+}
+.whyDiv .blocks {
+  margin-top: 80px;
+  transition: all 0.3s;
+  display: flex;
+}
+.whyDiv .blocks .item {
+  width: 280px;
+  height: 390px;
+  background: url("../img/whyBg.png")/*tpa=http://www.mghx77.com/joychash/img/whyBg.png*/ no-repeat center;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.whyDiv .blocks .item img {
+  display: block;
+  margin: 30px auto 0;
+}
+.whyDiv .blocks .item h4 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 30px 0 20px 0;
+}
+.whyDiv .blocks .item li {
+  margin: 15px 20px;
+  font-size: 12px;
+}
+.whyDiv .blocks .item li button {
+  display: block;
+  border: 0;
+  background: #847a97;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.whyDiv .blocks .item li button {
+  transition: all 0.3s;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.whyDiv .blocks .item li button:hover {
+  background: #bca6e6;
+}
+
+.whyDiv .blocks .item {
+  transition: all 0.3s;
+}
+
+.whyDiv .connect .email {
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+.whyDiv .connect .email span {
+  text-decoration: underline;
+  color: #ffe9a7;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.whyDiv .connect .email span:hover {
+  color: #f9db50;
+}
+
+.whyDiv .connect ul {
+  margin: 20px 0;
+  display: flex;
+}
+.whyDiv .connect ul div {
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+}
+.whyDiv .connect ul div i {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto auto 10px auto;
+  background: url("../img/whyTGIcon.png")/*tpa=http://www.mghx77.com/joychash/img/whyTGIcon.png*/;
+  background-size: 100%;
+}
+.whyDiv .connect ul div.fb i {
+  background-image: url("../img/whyFbIcon.png")/*tpa=http://www.mghx77.com/joychash/img/whyFbIcon.png*/;
+}
+
+
+/*常见问题*/
+.faqDiv {
+  background: #1b2354;
+  padding-bottom: 0px;
+}
+.faqDiv .title {
+  width: 478px;
+  height: 126px;
+  margin: 80px auto 50px auto;
+  background: url("../img/faqTitle_en.png")/*tpa=http://www.mghx77.com/joychash/img/faqTitle.png*/;
+  background-size: 100% 100%;
+}
+.faqDiv .title2{
+  width: 750px;
+  height: 1054px;
+  margin: 80px auto 50px auto;
+  background: url("../img/mobile/youxijieshao.jpg")/*tpa=http://www.mghx77.com/joychash/img/mobile/youxijieshao.jpg*/;
+  background-size: 100% 100%;
+}
+.faqDiv .list {
+  width: 1200px;
+  margin: auto;
+  font-size: 12px;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+.faqDiv .list a {
+  color: #f4b204;
+}
+.faqDiv .list ul li {
+  color: #c13e44;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 30px;
+  padding-top: 0;
+  border-radius: 15px;
+  position: relative;
+}
+.faqDiv .list ul li::after {
+  content: " ";
+  background: url("../img/Problems_2.png")/*tpa=http://www.mghx77.com/joychash/img/Problems_2.png*/ no-repeat center;
+  background-size: 100%;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+}
+.faqDiv .list ul li p {
+  color: #e72945;
+  font-size: 20px;
+}
+
+.faqDiv .list ul li p .arrow {
+  width: 30px;
+  height: 30px;
+  background: url("../img/Problems_1.png")/*tpa=http://www.mghx77.com/joychash/img/Problems_1.png*/ no-repeat center;
+  background-size: 50%;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+.faqDiv .list ul li .arrow.up {
+  background-image: url("../img/Problems_1_1.png")/*tpa=http://www.mghx77.com/joychash/img/Problems_1_1.png*/;
+}
+.faqDiv .list ul li div {
+  color: #8f91aa;
+  font-size: 12px;
+  padding-left: 20px;
+  margin: 10px 0 10px -20px;
+  text-align: justify;
+  font-weight: normal;
+}
+.faqDiv .list .moreInfo {
+  color: #ffea00;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+.faqDiv .list .moreInfo i {
+  width: 30px;
+  height: 30px;
+  background: url("../img/Yellow_arrow.png")/*tpa=http://www.mghx77.com/joychash/img/Yellow_arrow.png*/ no-repeat center;
+  background-size: 50%;
+  display: inline-block;
+}
+
+/*游戏介绍*/
+.jieshaoDiv {
+  background: #320272;
+  padding-bottom: 0px;
+}
+.jieshaoDiv .title {
+  width: 670px;
+  height: 126px;
+  margin: 80px auto 50px auto;
+ 
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t1{
+  width: 1150px;
+  height: 270px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_01_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_01.jpg*/;
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t2{
+  width: 1150px;
+  height: 270px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_02_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_02.jpg*/;
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t3{
+  width: 1150px;
+  height: 270px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_03_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_03.jpg*/;
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t4{
+  width: 1150px;
+  height: 270px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_04_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_04.jpg*/;
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t5{
+  width: 1150px;
+  height: 270px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_05_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_05.jpg*/;
+  background-size: 100% 100%;
+}
+.jieshaoDiv .t6{
+  width: 1150px;
+  height: 265px;
+  margin: 0px auto;
+  background: url("../img/jieshao/youxijieshao_06_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/youxijieshao_06.jpg*/;
+  background-size: 100% 100%;
+}
+
+/*活动福利*/
+.fuliDiv {
+  /*background: #e21001;*/
+  background: #171e48;
+  padding-bottom: 0px;
+}
+.fuliDiv .title {
+  width: 670px;
+  height: 126px;
+  margin: 80px auto 50px auto;
+  background: url("../img/fuliTitle.png")/*tpa=http://www.mghx77.com/joychash/img/fuliTitle.png*/;
+  background-size: 100% 100%;
+}
+.fuliDiv .t1{
+  width: 1150px;
+  height: 764px;
+  margin: 0px auto;
+  background: url("../img/fuli/huodongfuli_01.png")/*tpa=http://www.mghx77.com/joychash/img/fuli/huodongfuli_01.png*/;
+  background-size: 100% 100%;
+}
+.fuliDiv .t2{
+  width: 1150px;
+  height: 764px;
+  margin: 0px auto;
+  background: url("../img/fuli/huodongfuli_02.png")/*tpa=http://www.mghx77.com/joychash/img/fuli/huodongfuli_02.png*/;
+  background-size: 100% 100%;
+}
+.fuliDiv .t3{
+  width: 1150px;
+  height: 765px;
+  margin: 0px auto;
+  background:url("../img/fuli/huodongfuli_03.jpg")/*tpa=http://www.mghx77.com/joychash/img/fuli/huodongfuli_03.jpg*/;
+  background-size: 100% 100%;
+}
+
+/*关注频道*/
+.guanzhuDiv {
+  background: #171e48;
+  padding-bottom: 0px;
+}
+.guanzhuDiv .title {
+  width: 670px;
+  height: 126px;
+  margin: 80px auto 50px auto;
+  background:url("../img/guanzhuTitle.png")/*tpa=http://www.mghx77.com/joychash/img/guanzhuTitle.png*/;
+  background-size: 100% 100%;
+}
+.guanzhuDiv .t1{
+  width: 1150px;
+  height: 683px;
+  margin: 0px auto;
+  background: url("../img/guanzhu/guanfangpindao_01_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/guanfangpindao_01.jpg*/;
+  background-size: 100% 100%;
+}
+.guanzhuDiv .t1 .liaotian{
+	width:238px;
+	height:238px;
+	margin-left:860px;
+	padding-top:62px;
+}
+.guanzhuDiv .t2{
+  width: 1150px;
+  height: 683px;
+  margin: 0px auto;
+  background: url("../img/guanzhu/guanfangpindao_02_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/guanfangpindao_02.jpg*/;
+  background-size: 100% 100%;
+}
+.guanzhuDiv .t3{
+  width: 1150px;
+  height: 684px;
+  margin: 0px auto;
+  background: url("../img/guanzhu/guanfangpindao_03_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/guanfangpindao_03.jpg*/;
+  background-size: 100% 100%;
+}
+
+/*视频讲解*/
+.shipinDiv {
+  background: #171e48;
+  padding-bottom: 0px;
+}
+.shipinDiv .title {
+  width: 670px;
+  height: 126px;
+  margin: 80px auto 50px auto;
+  
+  background-size: 100% 100%;
+}
+.shipinDiv .t1{
+  width: 1150px;
+  height: 868px;
+  margin: 0px auto;
+  background: url("../img/shipin/shipinjiangjie_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/shipin/shipinjiangjie.jpg*/;
+  background-size: 100% 100%;
+}
+.shipinDiv .t1 .bofang{
+	width:253px;
+	height:293px;
+	margin-left:230px;
+	padding-top:406px;
+}
+/*1023px*/
+@media (max-width: 1023px) {
+  html,
+  body {
+    font-size: 4vw;
+    width: 100vw;
+  }
+  .pdiv {
+    display: none !important;
+  }
+
+  .block {
+    display: table;
+    width: 100vw;
+  }
+  .block .mainDiv {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  /*顶部导航条*/
+  .headNav .mainDiv {
+    width: 100vw;
+    margin: 0;
+    height: auto;
+    background-color: #1d1226;
+  }
+  .headNav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .headNav ul li {
+    margin: 0px;
+  }
+  .headNav .nav {
+    width: 100vw;
+    height: 11.7vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.53vw;
+    align-items: center;
+  }
+  .headNav .logo {
+    width: 30vw;
+    height: 11.7vw;
+    background-image: url("../img/mobile/logo.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/logo.png*/;
+    background-position: center;
+  }
+  .headNav .nav1 {
+    width: 75vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(60vw / 7.5);
+  }
+  .headNav .nav1 li {
+    display: flex;
+    align-items: center;
+    color: #dfdfe3;
+    font-size: calc(24vw / 7.5);
+    padding-right: calc(30vw / 7.5);
+  }
+  .headNav .nav1 li:last-child {
+    padding-right: 0;
+  }
+  .headNav .nav1 li i {
+    width: calc(49vw / 7.5);
+    height: calc(39vw / 7.5);
+    display: inline-block;
+    background: url("../img/mobile/game_icon.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/game_icon.png*/ no-repeat center;
+    background-size: 100%;
+    margin-right: calc(20vw / 7.5);
+  }
+  .headNav .nav1 li.service i {
+    background: url("../img/mobile/service_icon.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/service_icon.png*/ no-repeat center;
+    background-size: 100%;
+  }
+  .headNav .nav2 {
+    width: 100vw;
+    height: calc(80vw / 7.5);
+    background: #e12d62;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .headNav .nav2 li {
+    padding-right: calc(14vw / 7.5);
+    font-size: calc(22vw / 7.5);
+  }
+  .headNav .nav2 li:nth-last-of-type(1) {
+    padding-right: 0;
+  }
+  .container {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  /*首屏*/
+  .firstDiv {
+    /* height: 130vw; */
+  }
+  .firstWrap {
+    background: url("../img/mobile/banner_bg_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/mobile/banner_bg.jpg*/ no-repeat center
+      calc(168vw / 7.5);
+    background-size: 100%;
+  }
+  .firstDiv .mainDiv {
+    height: 130vw;
+    margin: 0;
+    padding-top: calc(168vw / 7.5);
+  }
+  .firstDiv .mainDiv h3 {
+    margin: 0;
+    padding-top: calc(80vw / 7.5);
+    padding-left: calc(90vw / 7.5);
+    font-size: calc(34vw / 7.5);
+    color: #fff;
+    letter-spacing: calc(6vw / 7.5);
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .firstDiv .slogan {
+    font-weight: 500;
+    width: 100vw;
+    margin: calc(80vw / 7.5) 0 0;
+  }
+  .firstDiv .slogan .slogo {
+    width: 100vw;
+  }
+  .firstDiv .slogan .slogo img {
+    width: calc(592vw / 7.5);
+    height: calc(82vw / 7.5);
+    padding-left: calc(54vw / 7.5);
+  }
+  .firstDiv .slogan span {
+    margin-right: 0;
+    margin-top: 0;
+    display: flex;
+    padding-top: 10px;
+  }
+  .firstDiv .slogan span img {
+    width: calc(210vw / 7.5);
+    height: calc(115vw / 7.5);
+    padding-left: calc(20vw / 7.5);
+  }
+  .firstDiv .slogan span:nth-of-type(1) > img {
+    padding-left: calc(34vw / 7.5);
+  }
+  .firstDiv .qrWrap {
+    width: calc(651vw / 7.5);
+    height: calc(300vw / 7.5);
+    margin: calc(673vw / 7.5) auto 0;
+    background: #542760;
+    border: 1px solid #e72944;
+    border-radius: calc(40vw / 7.5);
+    padding: calc(25vw / 7.5);
+    box-sizing: border-box;
+  }
+
+  .firstDiv .haInfo {
+    width: calc(600vw / 7.5);
+    height: calc(170vw / 7.5);
+    display: flex;
+    align-items: center;
+  }
+  .firstDiv .qrWrap .mqr {
+    width: calc(152vw / 7.5);
+    height: calc(152vw / 7.5);
+    flex: 0 0 calc(152vw / 7.5);
+    background: url("../img/mobile/banner_rq_bg.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/banner_rq_bg.png*/ no-repeat center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin-right: calc(20vw / 7.5);
+    margin-bottom: calc(20vw / 7.5);
+  }
+  .firstDiv .qrWrap .mqr i {
+    width: calc(100vw / 7.5);
+    height: calc(245vw / 7.5);
+    background: url("../img/mobile/banner_rq.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/banner_rq.png*/ no-repeat center;
+    background-size: 100%;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .firstDiv .qrWrap .mqr img {
+    width: calc(100vw / 7.5);
+    height: calc(100vw / 7.5);
+    background-size: 100%;
+    display: inline-block;
+    /* border-radius: 50%; */
+  }
+  .firstDiv .haInfo .txt {
+    font-size: calc(30vw / 7.5);
+    color: #fff;
+  }
+  .firstDiv .haInfo #hashAddress {
+    font-size: calc(24vw / 7.5);
+  }
+  .firstDiv .haInfo .txt h4 i {
+    color: #fee834;
+  }
+  .firstDiv .haInfo .txt span {
+    font-size: 3vw;
+  }
+  .firstDiv .qrWrap .copyBut {
+    width: calc(600vw / 7.5);
+    height: calc(80vw / 7.5);
+    line-height: calc(80vw / 7.5);
+    border-radius: calc(80vw / 7.5);
+    text-align: center;
+    font-size: calc(32vw / 7.5);
+    cursor: pointer;
+    background-image: linear-gradient(#e42d48, #df3884);
+  }
+  .firstDiv .qrWrap .copyBut:hover {
+    opacity: 0.8;
+  }
+
+  /*规则*/
+  .ruleDiv .title {
+    background: url("../img/ruleTitle_en.png")/*tpa=http://www.mghx77.com/joychash/img/ruleTitle.png*/ no-repeat center;
+    width: calc(328vw / 7.5);
+    height: calc(123vw / 7.5);
+    background-size: 100% 100%;
+    margin: calc(30vw / 7.5) auto calc(30vw / 7.5);
+  }
+  .ruleDiv .tab {
+    display: flex;
+    padding: 0 calc(10vw / 7.5);
+	padding-left:calc(70vw / 7.5);
+    height: calc(50vw / 7.5);
+  }
+  .ruleDiv .tab .tabItem {
+    font-size: calc(34vw / 7.5);
+    color: #8f91aa;
+    width: calc(120vw / 7.5);
+    height: calc(50vw / 7.5);
+    cursor: pointer;
+  }
+  .ruleDiv .tab .tabItem.active {
+    width: calc(220vw / 7.5);
+    height: calc(50vw / 7.5);
+    background: linear-gradient(90deg, #e42d48, #df3884);
+    border-radius: calc(50vw / 7.5);
+    line-height: calc(50vw / 7.5);
+    color: #fff;
+  }
+  .ruleDiv .tab .tabItem.active::after {
+    bottom: calc(-40vw / 7.5);
+  }
+  .ruleDiv .mainDiv .show {
+    padding: 0 calc(19vw / 7.5);
+    padding-top: calc(36vw / 7.5);
+  }
+  .ruleDiv .mainDiv .show .blocks .item {
+    flex-direction: column;
+    background-image: url("../img/mobile/rules_content_bg.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/rules_content_bg.png*/;
+    padding: calc(35vw / 7.5);
+    height: auto;
+  }
+  .ruleDiv .qrcodeBlock .copyBut {
+    width: calc(601vw / 7.5);
+    height: calc(81vw / 7.5);
+    line-height: calc(81vw / 7.5);
+    background-color: #fff;
+    color: #e42d49;
+    font-size: calc(32vw / 7.5);
+  }
+  .ruleDiv .ruleBlock {
+    width: calc(641vw / 7.5);
+    height: calc(490vw / 7.5);
+    margin-top: calc(40vw / 7.5);
+    padding: calc(52vw / 7.5);
+  }
+  .ruleDiv .show .example {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .ruleDiv .show .example li {
+    width: calc(500vw / 7.5);
+    flex: 0 0 calc(500vw / 7.5);
+    height: calc(750vw / 7.5);
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  /*参与流程*/
+  .circuitDiv {
+    padding-bottom: 0;
+  }
+  .circuitDiv .title {
+    width: calc(476vw / 7.5);
+    height: calc(124vw / 7.5);
+    margin: calc(80vw / 7.5) auto;
+  }
+  .circuitDiv .process ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(54vw / 7.5);
+  }
+  .circuitDiv .process ul li {
+    width: calc(110vw / 7.5);
+    height: calc(220vw / 7.5);
+    background-size: 50% 50%;
+    font-size: calc(36vw / 7.5);
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .circuitDiv .process ul li i {
+    width: calc(110vw / 7.5);
+    height: calc(110vw / 7.5);
+    background: url("../img/mobile/process_2.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/process_2.png*/ no-repeat center 0;
+    background-size: 100%;
+    display: inline-block;
+  }
+  .circuitDiv .process ul li.cur i {
+    background-position-y: calc(-110vw / 7.5);
+  }
+  .circuitDiv .process ul li:nth-of-type(2) i {
+    background-image: url("../img/mobile/process_3.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/process_3.png*/;
+  }
+  .circuitDiv .process ul li:nth-of-type(3) i {
+    background-image: url("../img/mobile/process_4.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/process_4.png*/;
+  }
+  .circuitDiv .process ul li p {
+    padding-top: calc(10vw / 7.5);
+  }
+  .circuitDiv .show {
+    padding: 0 calc(35vw / 7.5);
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .circuitDiv .blocks {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: calc(20vw / 7.5);
+  }
+  .circuitDiv .blocks h4 {
+    line-height: calc(100vw / 7.5);
+    font-size: calc(32vw / 7.5);
+  }
+  .circuitDiv .blocks .body {
+    width: calc(680vw / 7.5);
+    height: auto;
+    border-radius: calc(40vw / 7.5);
+    margin: 0;
+    margin-bottom: calc(90vw / 7.5);
+  }
+  .circuitDiv .blocks table tr {
+    margin: 0 calc(30vw / 7.5);
+  }
+  .circuitDiv .blocks table td {
+    padding: calc(20vw / 7.5) calc(10vw / 7.5);
+  }
+  .circuitDiv .blocks table td img {
+    width: calc(120vw / 7.5);
+  }
+  .circuitDiv .blocks table .tip {
+    left: calc(50vw / 7.5);
+    top: calc(-16vw / 7.5);
+    white-space: nowrap;
+    padding: 0;
+    background: transparent;
+  }
+  .circuitDiv .blocks table .tip span {
+    transform: scale(0.8);
+    transform-origin: center;
+    font-size: calc(24vw / 7.5);
+    display: inline-block;
+    padding: 2px;
+    background: #e42956;
+    border-radius: 2px;
+  }
+  .circuitDiv .blocks .item.b3 table th {
+    font-size: calc(26vw / 7.5);
+  }
+  .circuitDiv .blocks .item.b3 table td {
+    padding: calc(20vw / 7.5) 0;
+    font-size: calc(24vw / 7.5);
+  }
+  .circuitDiv .blocks .b3 .text span {
+    width: 140px;
+  }
+  .circuitDiv .blocks .item.b3 table td:nth-last-of-type(1) {
+    padding-right: calc(10vw / 7.5);
+  }
+  .circuitDiv .blocks .b3 .copyBut {
+    width: calc(91vw / 7.5);
+    height: calc(41vw / 7.5);
+    margin-left: calc(10vw / 7.5);
+  }
+  .circuitDiv .blocks table tr:not(:nth-of-type(1))::after {
+    left: 8%;
+    width: 86%;
+  }
+  
+  /* 实时数据 */
+  .nowDataDiv {
+    background: #171e48;
+  }
+  .nowDataDiv .title {
+    width: calc(480vw / 7.5);
+    height: calc(123vw / 7.5);
+    margin: calc(105vw / 7.5) auto calc(60vw / 7.5);
+  }
+  .nowDataDiv .blocks {
+    width: calc(680vw / 7.5);
+    height: auto;
+    padding: calc(40vw / 7.5);
+  }
+  .nowDataDiv .blocks .body {
+    /* height: auto; */
+    height: 220px;
+    margin: 0;
+  }
+  .nowDataDiv .blocks .body .tableBox{
+    height: 175px;
+    overflow-x: auto;
+    overflow-y: scroll;
+  }
+  .nowDataDiv .blocks table tr {
+    font-size: calc(24vw / 7.5) !important;
+  }
+  .nowDataDiv .blocks table tr th {
+    font-size: calc(26vw / 7.5) !important;
+    padding: calc(20vw / 7.5) 0;
+  }
+  .nowDataDiv .blocks table td {
+    padding: calc(10vw / 7.5) 0;
+  }
+  .nowDataDiv .blocks table tr:not(:nth-of-type(1))::after {
+    right: 2%;
+    left: 2%;
+  }
+
+  /*兑换*/
+  .exchangeDiv {
+    padding-bottom: 0;
+    background: #171e48;
+  }
+  .exchangeDiv .title {
+    width: calc(562vw / 7.5);
+    height: calc(125vw / 7.5);
+    margin: calc(140vw / 7.5) auto calc(50vw / 7.5);
+    background-image: url("../img/mobile/exchange_nav.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/exchange_nav.png*/;
+  }
+  .exchangeDiv .rate {
+    color: #fff;
+    font-size: calc(26vw / 7.5);
+    text-align: center;
+    padding-bottom: calc(30vw / 7.5);
+  }
+  .exchangeDiv .rate .mark {
+    color: #e52951;
+  }
+  .exchangeDiv .form {
+    height: calc(80vw / 7.5);
+  }
+  .exchangeDiv .form .input,
+  .exchangeDiv .form .text {
+    line-height: 1;
+    width: calc(300vw / 7.5);
+    height: calc(80vw / 7.5);
+  }
+  .exchangeDiv .form .input {
+    padding-left: 0;
+  }
+  .exchangeDiv .form .input input {
+    width: calc(200vw / 7.5);
+    color: #333;
+    font-size: calc(24vw / 7.5);
+    padding-left: calc(20vw / 7.5);
+  }
+  .exchangeDiv .form .input span {
+    font-size: calc(24vw / 7.5);
+    color: #e42d49;
+  }
+  .exchangeDiv .form .text {
+    width: calc(80vw / 7.5);
+    height: calc(80vw / 7.5);
+    margin: 0 calc(20vw / 7.5);
+  }
+  .exchangeDiv .form button {
+    width: calc(720vw / 7.5);
+    height: calc(80vw / 7.5);
+    line-height: calc(80vw / 7.5);
+    margin: 0 auto;
+    margin-top: calc(30vw / 7.5);
+    font-size: calc(32vw / 7.5);
+  }
+
+  .exchangeDiv .note {
+    width: calc(720vw / 7.5);
+    height: auto;
+    flex-direction: column;
+    margin: 40px auto;
+    background-image: url("../img/mobile/exchange_1.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/exchange_1.png*/;
+  }
+  .exchangeDiv .note .qrInfo {
+    padding: 0;
+    padding-top: calc(30vw / 7.5);
+    width: 100%;
+    font-size: calc(24vw / 7.5);
+  }
+  .exchangeDiv .note .qrInfo .qr {
+    display: flex;
+    justify-content: center;
+  }
+  .exchangeDiv .note .qrInfo .qr i {
+    width: calc(305vw / 7.5);
+    height: calc(305vw / 7.5);
+  }
+  .exchangeDiv .note .qrInfo .qr img {
+    width: calc(305vw / 7.5);
+    height: calc(305vw / 7.5);
+  }
+  .exchangeDiv .note h4 {
+    font-size: calc(32vw / 7.5);
+    padding: calc(30vw / 7.5) 0;
+    text-align: center;
+  }
+
+  #exchangeHashAddress {
+    padding-bottom: calc(30vw / 7.5);
+    text-align: center;
+  }
+  #exchangeCopyBut {
+    width: calc(601vw / 7.5);
+    height: calc(81vw / 7.5);
+    color: #fff;
+    font-size: calc(32vw / 7.5);
+    background: linear-gradient(#e42d48, #df3884);
+    border-radius: calc(81vw / 7.5);
+    border-color: transparent;
+  }
+  .exchangeDiv .note .text {
+    font-size: calc(24vw / 7.5);
+    padding: calc(30vw / 7.5) 0;
+  }
+  /*为什么*/
+  .whyDiv {
+    padding-bottom: 10vw;
+  }
+  .whyDiv .title {
+    width: calc(740vw / 7.5);
+    height: calc(103vw / 7.5);
+    margin: calc(60vw / 7.5) auto;
+    background-image: url("../img/aboutTitle.png")/*tpa=http://www.mghx77.com/joychash/img/aboutTitle.png*/;
+  }
+
+  .whyDiv .blocks {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: calc(30vw / 7.5);
+    padding: 0 calc(20vw / 7.5);
+  }
+  .whyDiv .blocks .item {
+    width: 49%;
+    height: calc(601vw / 7.5);
+    border-radius: 5vw;
+    margin-right: 0;
+    background-image: url("../img/mobile/whyTitle_tb.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/whyTitle_tb.png*/;
+    margin-bottom: calc(30vw / 7.5);
+  }
+  .whyDiv .blocks .item img {
+    width: calc(76vw / 7.5);
+    margin-top: calc(30vw / 7.5);
+  }
+  .whyDiv .blocks .item h4 {
+    font-size: calc(30vw / 7.5);
+    margin: calc(30vw / 7.5) auto;
+  }
+  .whyDiv .blocks .item ul {
+    padding-left: calc(20vw / 7.5);
+  }
+  .whyDiv .blocks .item li {
+    font-size: calc(24vw / 7.5);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .whyDiv .blocks .item li span {
+    padding-right: calc(10vw / 7.5);
+    font-size: calc(30vw / 7.5);
+  }
+  .whyDiv .connect .email {
+    margin-left: calc(10vw / 7.5);
+  }
+  #emailCopyBut {
+    color: #ffea00;
+    font-size: calc(22vw / 7.5);
+    float: right;
+    margin-right: calc(20vw / 7.5);
+    padding-top: calc(10vw / 7.5);
+  }
+  .whyDiv .connect ul div {
+    width: calc(150vw / 7.5);
+    padding-top: calc(20vw / 7.5);
+  }
+  .whyDiv .connect ul div i {
+    width: calc(79vw / 7.5);
+    height: calc(79vw / 7.5);
+  }
+  /*游戏介绍*/
+  .jieshaoDiv {
+  background: #320272;
+}
+	.jieshaoDiv .title {
+    width: calc(670vw / 7.5);
+    height: calc(126vw / 7.5);
+    margin: calc(40vw / 7.5) auto calc(60vw / 7.5);
+/*	background-image: url("../img/mobile/jieshaoTitle_nav.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/jieshaoTitle_nav.png*/;*/
+}
+  .jieshaoDiv .t1 {
+    width: calc(750vw / 7.5);
+    height: calc(175vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_01_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_01.jpg*/;
+  }
+  .jieshaoDiv .t2 {
+    width: calc(750vw / 7.5);
+    height: calc(175vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_02_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_02.jpg*/;
+  }
+  .jieshaoDiv .t3 {
+    width: calc(750vw / 7.5);
+    height: calc(175vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_03_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_03.jpg*/;
+  }
+  .jieshaoDiv .t4 {
+    width: calc(750vw / 7.5);
+    height: calc(175vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_04_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_04.jpg*/;
+  }
+  .jieshaoDiv .t5 {
+    width: calc(750vw / 7.5);
+    height: calc(175vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_05_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_05.jpg*/;
+  }
+  .jieshaoDiv .t6 {
+    width: calc(750vw / 7.5);
+    height: calc(179vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/jieshao/m/youxijieshao_06_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/jieshao/m/youxijieshao_06.jpg*/;
+  }
+
+  /*活动福利*/
+	.fuliDiv {
+    background: #171e48;
+}
+	.fuliDiv .title {
+    width: calc(670vw / 7.5);
+    height: calc(126vw / 7.5);
+    margin: calc(40vw / 7.5) auto;
+}
+	.fuliDiv .t1 {
+    width: calc(750vw / 7.5);
+    height: calc(498vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/fuli/m/huodongfuli_01.jpg")/*tpa=http://www.mghx77.com/joychash/img/fuli/m/huodongfuli_01.jpg*/;
+  }
+  	.fuliDiv .t2 {
+    width: calc(750vw / 7.5);
+    height: calc(498vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/fuli/m/huodongfuli_02.jpg")/*tpa=http://www.mghx77.com/joychash/img/fuli/m/huodongfuli_02.jpg*/;
+  }
+  	.fuliDiv .t3 {
+    width: calc(750vw / 7.5);
+    height: calc(499vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/fuli/m/huodongfuli_03.jpg")/*tpa=http://www.mghx77.com/joychash/img/fuli/m/huodongfuli_03.jpg*/;
+  }
+  
+    /*关注频道*/
+	.guanzhuDiv {
+    background: #171e48;
+}
+  .guanzhuDiv .title {
+    width: calc(740vw / 7.5);
+    height: calc(103vw / 7.5);
+	margin: calc(40vw / 7.5) auto;
+  }
+	.guanzhuDiv .t1 {
+    width: calc(750vw / 7.5);
+    height: calc(445vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/guanzhu/m/guanfangpindao_01_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/m/guanfangpindao_01.jpg*/;
+  }
+  .guanzhuDiv .t1 .liaotian{
+	width:calc(150vw / 7.5);
+    height:calc(150vw / 7.5);
+	margin-left:calc(550vw / 7.5);
+	padding-top:calc(40vw / 7.5);
+}
+  	.guanzhuDiv .t2 {
+    width: calc(750vw / 7.5);
+    height: calc(445vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/guanzhu/m/guanfangpindao_02_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/m/guanfangpindao_02.jpg*/;
+  }
+  	.guanzhuDiv .t3 {
+    width: calc(750vw / 7.5);
+    height: calc(447vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/guanzhu/m/guanfangpindao_03_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/guanzhu/m/guanfangpindao_03.jpg*/;
+  }
+    /*视频讲解*/
+	.shipinDiv {
+    background: #171e48;
+  }
+	.shipinDiv .title {
+    width: calc(670vw / 7.5);
+    height: calc(126vw / 7.5);
+    margin: calc(40vw / 7.5) auto;
+}
+	.shipinDiv .t1 {
+    width: calc(750vw / 7.5);
+    height: calc(566vw / 7.5);
+    margin: 0 auto;
+    background-image: url("../img/shipin/m/shipinjiangjie_en.jpg")/*tpa=http://www.mghx77.com/joychash/img/shipin/m/shipinjiangjie.jpg*/;
+  }
+	.shipinDiv .t1 .bofang{
+	width:calc(166vw / 7.5);
+	height:calc(191vw / 7.5);
+	margin-left:calc(180vw / 7.5);
+	padding-top:calc(320vw / 7.5);
+}
+
+  /*常见问题*/
+  .faqDiv {
+    background: #171e48;
+  }
+  .faqDiv .title {
+    width: calc(478vw / 7.5);
+    height: calc(126vw / 7.5);
+    margin: calc(40vw / 7.5) auto calc(60vw / 7.5);
+    background-image: url("../img/mobile/Problems_nav.png")/*tpa=http://www.mghx77.com/joychash/img/mobile/Problems_nav.png*/;
+  }
+  .faqDiv .title2 {
+    width: calc(750vw / 7.5);
+    height: calc(1054vw / 7.5);
+    margin: calc(40vw / 7.5) auto calc(60vw / 7.5);
+    background-image: url("../img/mobile/youxijieshao.jpg")/*tpa=http://www.mghx77.com/joychash/img/mobile/youxijieshao.jpg*/;
+  }
+  .faqDiv .list {
+    width: 90vw;
+    font-size: 4vw;
+    margin-bottom: 10vw;
+  }
+  .faqDiv .list ul {
+    overflow: hidden;
+  }
+  .faqDiv .list ul li {
+    margin-top: 0vw;
+    font-size: 3.8vw;
+  }
+  .faqDiv .list ul li {
+    padding: 5vw 0;
+    border-radius: 3.5vw;
+  }
+  .faqDiv .list ul li::after {
+    left: 0;
+  }
+  .faqDiv .list ul li div {
+    padding-left: 5vw;
+	padding-right: 2vw;
+    margin: 2vw 0 1vw -5vw;
+    /*height: 10vw;*/
+    overflow: hidden;
+    font-size: calc(24vw / 7.5);
+  }
+  .faqDiv .list ul li p {
+    font-size: calc(28vw / 7.5);
+  }
+  .faqDiv .list ul li button {
+    background: #b04e40;
+    border: 0;
+    border-radius: 5px;
+    padding: 1vw 5vw;
+    color: #fff;
+    font-size: 3.5vw;
+    /*相关软件下载*/
+    .softDiv .body {
+      width: 89.4vw;
+      height: 12vw;
+      margin: 12vw auto 5vw auto;
+    }
+    .softDiv .body ul {
+      width: 90vw;
+      font-size: 4vw;
+      margin-bottom: 10vw;
+    }
+    .softDiv .body li strong {
+      margin-top: 4vw;
+      font-size: 3.8vw;
+    }
+    .softDiv .body li.link {
+      padding: 5vw;
+      border-radius: 3.5vw;
+    }
+    .softDiv .body li.link a {
+      color: #c39a66;
+    }
+    .softDiv .body li.link a:hover {
+      color: #feca88;
+    }
+  }
+
+  #tipDiv {
+    padding: calc(10vw / 7.5) calc(20vw / 7.5);
+    transform: translateX(-50%);
+  }
+  /*浮窗*/
+  .winDiv {
+    width: 80vw;
+    padding: 5vw;
+    border-radius: 5vw;
+  }
+  .winDiv h2 {
+    font-size: 5vw;
+    padding: 0 0 5vw 5vw;
+    margin: 0 -5vw;
+  }
+  .winDiv .colse {
+    width: 6vw;
+    height: 6vw;
+    margin-left: 73vw;
+  }
+  .winDiv .body {
+    margin-top: 5vw;
+  }
+
+  .winDiv .service .email {
+    display: table;
+    padding-left: 8vw;
+    margin: 8vw auto 0 auto;
+  }
+  .winDiv .service .email {
+    background-size: 6vw;
+  }
+  .winDiv .service .email span {
+    margin-left: 2vw;
+  }
+  .winDiv .service ul {
+    margin: 10vw 0 8vw 5vw;
+    display: table;
+  }
+  .winDiv .service ul div {
+    width: 35vw;
+  }
+  .winDiv .service ul div i {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    margin: auto auto 4vw auto;
+  }
+}
+

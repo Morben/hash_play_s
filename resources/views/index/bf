@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+        <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+        <meta name="author" content="Coderthemes" />
+
+        <!-- Site Title -->
+        <title>Dojek - Responsive Bootstrap 5 Landing Page Template</title>
+        <!-- Site favicon -->
+        <link rel="shortcut icon" href="/boot/images/favicon.ico" />
+
+        <!-- Light-box -->
+        <link rel="stylesheet" href="/boot/css/mklb.css" type="text/css" />
+
+        <!-- Swiper js -->
+        <link rel="stylesheet" href="/boot/css/swiper-bundle.min.css" type="text/css" />
+
+        <!--Material Icon -->
+        <link rel="stylesheet" type="text/css" href="/boot/css/materialdesignicons.min.css" />
+
+        <link rel="stylesheet" href="/boot/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/boot/css/style.css" />
+        <style>
+            .busi-container-filter li a{
+                color: white;
+                background-color: #11134c;
+                
+            }
+            
+            .tab-active.active{
+                background-color: #40c5d0;
+            }
+            .swiper-slide swiper-slide-next{
+                width: 120%;
+            }
+            .card{
+                background-color: #2e2b81;
+                color: white;
+                height: 400px;
+            }
+            .navbar-custom .navbar-nav .nav-item .nav-link{
+                color: white;
+            }
+            .nav-sticky.navbar-custom .navbar-nav .nav-item .nav-link{
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60" style="background:#11134c">
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="navbar-sticky" style="background:#0f0e6b;opacity:0.9">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="logo text-uppercase" href="/">
+                    <img src="/boot/images/logo-dark.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto navbar-center" id="mySidenav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">游戏介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#testimonial" class="nav-link">玩法说明</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#team" class="nav-link">视频讲解</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#group" class="nav-link">关注频道</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">联系客服</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- home-agency start -->
+        <section class="hero-agency" id="home" style="padding:0px 0px 0px">
+             <img src="/boot/images/bg1.png" alt="" class="img-fluid" />
+            
+        </section>
+        <!-- home-agency end -->
+
+        <!-- About start -->
+        <section class="section bg-light" id="about" style="padding:0px 0px 0px;padding-top:0px !important;padding-bottom:0px !important">
+            <img src="/boot/images/bg2.png" alt="" class="img-fluid" />
+        </section>
+        <!-- About end -->
+
+        <!-- Projects start -->
+       
+        <!-- Projects end -->
+
+        <!-- Testimonials start -->
+        <section class="section testi-bg" id="testimonial" style="background:#11134c;padding:0px 0px 0px;padding-top:0px !important;padding-bottom:0px !important">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 col-lg-6 text-center">
+                        <h2 class="title" style="color:white" >玩法及规则</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <ul class="col busi-container-filter categories-filter text-center" id="filter">
+                        <li><a class="categories tab-active active" onclick="clickswiper(2)">牛牛</a></li>
+                        <li><a class="categories tab-active" onclick="clickswiper(3)" >尾数</a></li>
+                        <li><a class="categories tab-active" onclick="clickswiper(4)">单双</a></li>
+                        <li><a class="categories tab-active" onclick="clickswiper(5)">百家乐</a></li>
+                    </ul>
+                </div>
+                
+                <div class="row testi-row">
+                    <div class="col-12">
+                        <!-- Swiper -->
+                        <div class="clients-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" >
+                                    <div class="card shadow-lg">
+                                        <div class="card-body p-4">
+                                            <h5 class="my-2 pt-2 fs-32 lh-base" style="font-size:38px;margin-top:-20px">牛牛</h5>
+                                            <h6 class="mb-0">投注转账的区块</h6>
+                                            <br>
+                                            <h6 class="mb-0">哈希值后五位  <span style="float:right;font-size:24px">十倍玩法</span></h6>
+                                            <p class="mb-0">如:0000...<span style="color:#3cc2d5" >a618c</span></p>
+                                            <p class="mb-0" style="color:#3cc2d5" >[a618c]</p>
+                                            <br>
+                                            <p class="mb-0 fs-14">转账限注：USDT：1-10000 TRX：1-10000</p>
+                                            <p class="mb-0 fs-14">xxxxxxxxxxxxxxxxx</p>
+                                            <div style="height:10px"></div>
+                                            <br>
+                                            <a class="mb-0 fs-12"  style="background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;" >复制投注地址</a>
+                                            <div class="position-absolute bottom-0 end-0">
+                                                <img src="/boot/images/niuniu.png" alt="" height="75" style="z-index:-1" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" style="opacity:none">
+                                    <div class="card shadow-lg">
+                                        <div class="card-body p-4">
+                                            <h5 class="my-2 pt-2 fs-32 lh-base" style="font-size:38px;margin-top:-30px">尾数玩法</h5>
+                                            <h6 class="mb-0">您投注转账额度区块哈希值</h6>
+                                            <h6 class="mb-0">最后两位数  
+                                            <span style="float:right;font-size:14px">如:0000...4c1
+                                            <span style="color:#3cc2d5">a6</span>
+                                            <span style="color:#3cc2d5">[a6]</span>
+                                            </span></h6>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-5">
+                                                  <p class="mb-0 fs-18" style="text-align: center;">中奖</p>
+                                                  <p class="mb-0 fs-14" style="text-align: center;">数字+字母</p>
+                                                  <p class="mb-0 fs-14" style="text-align: center;">字母+数字</p>
+                                                </div>
+                                                <div class="col-2">
+                                                  <div style="height:100%;width:3px;background-color:#3cc2d5"></div>
+                                                </div>
+                                                <div class="col-5">
+                                                  <p class="mb-0 fs-18" style="text-align: center;">未中奖</p>
+                                                  <p class="mb-0 fs-14" style="text-align: center;">数字+数字</p>
+                                                  <p class="mb-0 fs-14" style="text-align: center;">字母+字母</p>
+                                                </div>
+                                             </div>
+                                             <br>
+                                            <p class="mb-0 fs-14">转账限注：USDT：1-10000 TRX：1-10000</p>
+                                            <p class="mb-0 fs-14">xxxxxxxxxxxxxxxxx</p>
+                                            <div style="height:10px"></div>
+                                            <a class="mb-0 fs-12"  style="background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;" >复制投注地址</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" style="opacity:none">
+                                    <div class="card shadow-lg">
+                                        <div class="card-body p-4">
+                                            <h5 class="my-2 pt-2 fs-32 lh-base" style="font-size:38px;margin-top:-20px">单双玩法</h5>
+                                            <h6 class="mb-0">您投注转账的区块哈希值</h6>
+                                            <h6 class="mb-0">后三位最后数字  <span style="float:right;font-size:12px">如：0000...9c
+                                            <span style="color:#3cc2d5" >1b7 [1b7]</span>
+                                            </span></h6>
+                                            <br>
+                                            <p class="mb-0" style="text-align:center">中奖</p>
+                                            <p class="mb-0"  >转账投注的金额<span style="color:#3cc2d5" >个位数</span> <span style="float:right">单或双一致</span></p>
+                                            <p class="mb-0"  >哈希值后三位<span style="color:#3cc2d5" >的最后数字</span></p>
+                                            <br>
+                                            <p class="mb-0 fs-14">转账限注：USDT：1-10000 TRX：1-10000</p>
+                                            <p class="mb-0 fs-14">xxxxxxxxxxxxxxxxx</p>
+                                            <div style="height:10px"></div>
+                                             <a class="mb-0 fs-12"  style="background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;" >复制投注地址</a>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" style="opacity:none">
+                                    <div class="card shadow-lg">
+                                        <div class="card-body p-4;">
+                                            <h5 class="my-2 pt-2 fs-32 lh-base" style="font-size:38px;margin-top:-20px">百家乐庄闲和玩法</h5>
+                                            <h6 class="mb-0">您投注转账的区块哈希值</h6>
+                                            <h6 class="mb-0">最后五位尾数<span style="float:right;font-size:12px">如：0000...4c
+                                            <span style="color:#3cc2d5" >1ab [4c1ab]</span>
+                                            </span></h6>
+                                            <p class="mb-0">前三位:庄点数     后三位：闲点数</p>
+                                            <p class="mb-0 fs-12">
+                                                <p class="mb-0 fs-12" style="text-align: center;">百家乐庄</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;">xxxxxxxxxxxxxxxxx</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;margin:0 auto;width:60%">复制投注地址</p>
+                                                
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                  <p class="mb-0 fs-12" style="text-align: center;">百家乐庄</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;">xxxxxxxxxxxxxxxxx</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;margin:0 auto;width:80%">复制投注地址</p>
+                                                </div>
+                                                <div class="col-6">
+                                                  <p class="mb-0 fs-12" style="text-align: center;">百家乐庄</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;">xxxxxxxxxxxxxxxxx</p>
+                                                <p class="mb-0 fs-12" style="text-align: center;background-color:#40c5d0;padding:5px;border-radius:10px;color:white;letter-spacing: 2px;margin:0 auto;width:80%">复制投注地址</p>
+                                                </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div style="color:white;background-image: linear-gradient(to right, #1f0e5e,#311e7c, #1c0c59);padding:20px 10px 10px 10px">
+                            <div id="niuniurule" style="">
+                                <h4 style="color:#3cc2d5;font-weight:700">开奖结果</h4>
+                                <span>采用 【区块哈希值】 后五位。平台点数：后五位中的前3位之和；玩家点数：后五位中的后3位之和；字母=10点</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">玩法</h4>
+                                <span>根据牛几的几倍倍数结算 <span style="color:#fcff00">(牛一*1倍···.牛牛*10倍数)</span> </span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                                <span>转账金额 = 投注金额*10倍 如投注100需转账1000</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">赔率: <span style="color:#fcff00">本金+投注额*牛几倍数*0.95</span> </h4>
+                                <h4 style="color:#3cc2d5;font-weight:700">特殊规则:</h4>
+                                <span>
+                                    1、牛一~牛二 玩家与平台同点 平台胜；<br>
+                                    2、牛三~牛牛 玩家与平台同点，按各自结果中的字母数字大小依次比较（字母=10，0最小）；<br>
+                                    
+                                    3、牛三~牛牛 玩家与平台同点，各自结果中数字同点，和局，原额退还给玩家。<br>
+                                    
+                                </span> 
+                            </div>
+                            
+                            <div id="shuangweirule" style="display:none">
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖规则</h4>
+                                <span>采用 【区块哈希值】 后两位。</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖</h4>
+                                <span style="color:#fcff00" > 【数字+字母】或 【字母+数字】 </span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">未中奖</h4>
+                                <span style="color:#fcff00" > 【数字+数字】或 【字母+字母】 </span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">赔率: <span style="color:#fcff00">1赔1.95</span> </h4>
+                            </div>
+                            
+                            <div id="danshuangrule" style="display:none">
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖规则</h4>
+                                <span>采用 【区块哈希值】 后三位的最后数字。</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖</h4>
+                                <span  > 玩家转账金额<span style="color:#fcff00">个位数</span> 与开奖结果 <span style="color:#fcff00">单或双</span>一致,则玩家 <span style="color:#fcff00">中奖</span> </span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">未中奖</h4>
+                                <span  > 如<span style="color:#fcff00">不一致</span> 或哈希值 <span style="color:#fcff00">后三位全为字母</span>则玩家 <span style="color:#fcff00">未中奖</span> </span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">赔率: <span style="color:#fcff00">1赔1.95</span> </h4>
+                            </div>
+                            <div id="baijialerule" style="display:none">
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖规则</h4>
+                                <span>采用 【区块哈希值】 后五位的前三位相加为庄点数，后三位相加为闲点数，字母为0点。</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖</h4>
+                                <span  > 百家乐庄玩法(2.00赔率) 庄点数大于闲点数，则庄赢，玩家<span style="color:#fcff00">中奖</span></span>
+                                <span  > 百家乐闲玩法(2.00赔率) 闲点数大于庄点数，则闲赢，玩家<span style="color:#fcff00">中奖</span></span>
+                                <span  > 百家乐和玩法(2.00赔率) 闲点数等于庄点数，则和赢，玩家<span style="color:#fcff00">中奖</span></span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">中奖金额</h4>
+                                <span  > 中奖金额 = 转账金额*赔率</span>
+                                <div style="height:10px"></div>
+                                <h4 style="color:#3cc2d5;font-weight:700">百家乐庄限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                                <h4 style="color:#3cc2d5;font-weight:700">百家乐闲限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                                <h4 style="color:#3cc2d5;font-weight:700">百家乐和限额:</h4>
+                                <span style="color:#fcff00">TRX: 111111 USDT:111111</span> <br>
+                               
+                            </div>
+                              
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials end -->
+       
+
+        <!-- counter start -->
+        <section class="section " style="background-color:#11134c;padding:0px 0px 0px;padding-top:0px !important;padding-bottom:0px !important">
+            <div class="container">
+                <div class="row" id="counter niuniuex" style="display:block">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例一</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">1000</span></p>
+                                <p class="counter-name  mb-0 ">您的投注金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****34a80</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄家:<span style="color:#3cc2d5">3+4+a=牛七</span></p>
+                                <p class="counter-name  mb-0 " >玩家:<span style="color:#3cc2d5">a+8+0=牛八</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">玩家赢</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >1000(本金)+100*8*0.95(盈利)=1760</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例二</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">1000</span></p>
+                                <p class="counter-name  mb-0 ">您的投注金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****7b042</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄家:<span style="color:#3cc2d5">7+b+0=牛七</span></p>
+                                <p class="counter-name  mb-0 " >玩家:<span style="color:#3cc2d5">0+4+6=牛六</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">玩家输</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >1000(本金)-100*7(亏损)=300</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例三</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">1000</span></p>
+                                <p class="counter-name  mb-0 ">您的投注金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****52f61</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄家:<span style="color:#3cc2d5">5+2+f=牛七</span></p>
+                                <p class="counter-name  mb-0 " >玩家:<span style="color:#3cc2d5">f+6+1=牛七</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >开奖结果同点再比数字<span style="color:#3cc2d5;">玩家6>庄家5</span> 结果<span style="color:#3cc2d5;">玩家赢</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >1000(本金)+100*7*0.95(盈利)=1665</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例四</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">1000</span></p>
+                                <p class="counter-name  mb-0 ">您的投注金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****02abf</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄家:<span style="color:#3cc2d5">0+2+a=牛二</span></p>
+                                <p class="counter-name  mb-0 " >玩家:<span style="color:#3cc2d5">2+b+f=牛二</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;">牛一、牛二同点不比 玩家输</span> 结果<span style="color:#3cc2d5;">玩家输</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >1000(本金)-100*2(亏损)=800</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <!--尾数-->
+            <div class="row" id="counter weishuex" style="display:none">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例一</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****9e3a</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后二位为3a【数字+字母】</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">中奖</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >100*1.95=195</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例二</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****9eb8</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后二位为b8【字母+数字】</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">中奖</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >100*1.95=195</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例三</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****9e47</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后二位为47【数字+数字】</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例四</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****91ac</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后二位为ac【字母+字母】</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--单双-->
+                
+                <div class="row" id="counter danshuangex" style="display:none" >
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例一</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">101</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****8ea3</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后三位最后一个数字为"3"</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">中奖</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >101*1.95=196.95</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                         <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例二</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">102</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****8e6c</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后三位最后一个数字为"6"</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">中奖</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >102*1.95=198.90</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                         <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例三</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">106</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****d7ab</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后三位最后一个数字为"7"</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                            <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例四</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">108</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****8abc</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">区块哈希值的后三位全为字母</p>
+                                <br>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--百家乐-->
+                
+                <div class="row" id="counter baijialeex" style="display:none">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                        <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例一</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">您的投注为:<span style="color:#fcff00;font-weight:700">百家乐庄玩法</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****34a80</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄:<span style="color:#3cc2d5">3+4+a=7</span></p>
+                                <p class="counter-name  mb-0 " >闲:<span style="color:#3cc2d5">a+8+0=8</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">闲点数大于庄点数，玩家输</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                        <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例二</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">您的投注为:<span style="color:#fcff00;font-weight:700">百家乐闲玩法</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****7b042</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄:<span style="color:#3cc2d5">7+b+0=7</span></p>
+                                <p class="counter-name  mb-0 " >闲:<span style="color:#3cc2d5">0+4+2=6</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">庄点数大于闲点数，玩家输</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " ><span style="color:#3cc2d5;"></span> 结果<span style="color:#3cc2d5;">未中奖</span>系统不返奖</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                        <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例三</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">您的投注为:<span style="color:#fcff00;font-weight:700">百家乐和玩法</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****52f61</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄:<span style="color:#3cc2d5">5+2+f=7</span></p>
+                                <p class="counter-name  mb-0 " >闲:<span style="color:#3cc2d5">f+6+1=7</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">庄点数等于闲点数，玩家赢</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >100(本金)*8.95=850</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class=" my-3">
+                        <div class="counter-content" style="background-image: linear-gradient(to right, #6764cd,#484ab4, #363ea2);color:white;border-radius:10px;padding:15px;height:380px">
+                                <h5 style="text-align:center"><span class="counter_value" data-target="825" style="font-size:24px;">示例四</span></h5>
+                                <p class="counter-name  mb-0">您的转账金额为:<span style="color:#fcff00;font-weight:700">100</span></p>
+                                <p class="counter-name  mb-0 ">您的投注为:<span style="color:#fcff00;font-weight:700">百家乐庄玩法</span></p>
+                                <p class="counter-name  mb-0 ">该笔转账的区块哈希为:<span style="color:#fcff00;font-weight:700">000*****1a3bf</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 text-uppercase">游戏结果</p>
+                                <p class="counter-name  mb-0 " >庄:<span style="color:#3cc2d5">1+a+3=4</span></p>
+                                <p class="counter-name  mb-0 " >闲:<span style="color:#3cc2d5">3+b+f=3</span></p>
+                                <br>
+                                <p class="counter-name  mb-0 " >结果<span style="color:#3cc2d5;">庄点数大于闲点数，玩家赢</span>系统回款为:</p>
+                                <p class="counter-name  mb-0 " style="color:#fcff00;float:left;font-size:14px" >100(本金)*2.0=200</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- counter end -->
+
+        <!-- team start -->
+        <section class="section" id="team" style="padding:0px 0px 0px;padding-top:0px !important;padding-bottom:0px !important">
+            <img src="/boot/images/bg3.png" alt="" class="img-fluid" />
+        </section>
+        <!-- team end -->
+        
+        <section class="section" id="group" style="padding:0px 0px 0px;padding-top:0px !important;padding-bottom:0px !important">
+            <img src="/boot/images/bg4.png" alt="" class="img-fluid" />
+        </section>
+        <!-- footer & cta start -->
+        
+        <!-- footer & cta end -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" class="back-to-top-btn btn btn-dark" id="back-to-top"><i class="mdi mdi-chevron-up"></i></a>
+
+        <!-- javascript -->
+        <script src="/boot/js/bootstrap.bundle.min.js"></script>
+        <!-- Portfolio filter -->
+        <script src="/boot/js/filter.init.js"></script>
+        <!-- Light-box -->
+        <script src="/boot/js/mklb.js"></script>
+        <!-- swiper -->
+        <script src="/boot/js/swiper-bundle.min.js"></script>
+        <script src="/boot/js/swiper.js"></script>
+
+        <!-- counter -->
+        <script src="/boot/js/counter.init.js"></script>
+        <script src="/boot/js/app.js"></script>
+        <script>
+          swiper.slideTo(2,1000,false);
+          function clickswiper(index){
+            if(index == 2){
+                //牛牛
+                document.getElementById("niuniuex").style.display = "block";
+                document.getElementById("weishuex").style.display = "none";
+                document.getElementById("danshuangex").style.display = "none";
+                document.getElementById("baijialeex").style.display = "none";
+                
+                document.getElementById("niuniurule").style.display = "block";
+                document.getElementById("shuangweirule").style.display = "none";
+                document.getElementById("danshuangrule").style.display = "none";
+                document.getElementById("baijialerule").style.display = "none";
+            }else if(index == 3){
+                //尾数
+                document.getElementById("niuniuex").style.display = "none";
+                document.getElementById("weishuex").style.display = "block";
+                document.getElementById("danshuangex").style.display = "none";
+                document.getElementById("baijialeex").style.display = "none";
+                
+                document.getElementById("niuniurule").style.display = "none";
+                document.getElementById("shuangweirule").style.display = "block";
+                document.getElementById("danshuangrule").style.display = "none";
+                document.getElementById("baijialerule").style.display = "none";
+            }else if(index == 4){
+                //单双
+                document.getElementById("niuniuex").style.display = "none";
+                document.getElementById("weishuex").style.display = "none";
+                document.getElementById("danshuangex").style.display = "block";
+                document.getElementById("baijialeex").style.display = "none";
+                
+                document.getElementById("niuniurule").style.display = "none";
+                document.getElementById("shuangweirule").style.display = "none";
+                document.getElementById("danshuangrule").style.display = "block";
+                document.getElementById("baijialerule").style.display = "none";
+            }else if(index == 5){
+                //百家乐
+                 document.getElementById("niuniuex").style.display = "none";
+                document.getElementById("weishuex").style.display = "none";
+                document.getElementById("danshuangex").style.display = "none";
+                document.getElementById("baijialeex").style.display = "block";
+                
+                document.getElementById("niuniurule").style.display = "none";
+                document.getElementById("shuangweirule").style.display = "none";
+                document.getElementById("danshuangrule").style.display = "none";
+                document.getElementById("baijialerule").style.display = "block";
+            }else{
+                
+            }
+            swiper.slideTo(index,1000,false);
+          }   
+           
+
+        </script>
+     
+    </body>
+</html>

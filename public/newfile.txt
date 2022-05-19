@@ -1,0 +1,1 @@
+{"update_id":30065575,"message":{"message_id":50,"from":{"id":2015407010,"is_bot":false,"first_name":"\u6c5f","last_name":"\u5b8b","language_code":"zh-hans"},"chat":{"id":2015407010,"first_name":"\u6c5f","last_name":"\u5b8b","type":"private"},"date":1651740643,"text":"\/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}
