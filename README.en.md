@@ -1,48 +1,77 @@
-# tron_hsah_java
-
-#### 介绍
-波场哈希竞猜 java对接波场 dcatadmin后台处理 dapp可玩
-
-开源代码仅供参考学习，请勿用于非法用途；
-
-演示地址 : http://58hash.vip/#/?code=7IRDZ
-
-1、关键功能
-对接电报机器人
-支持关键词回复
-支持群推送
-支持按钮
-支持发送图片或文字
-系统配置(钱包地址 投注限制 赔率等设置)
-生成靓号 自动生成trc20 四连以上尾号地址
-游戏记录 监听trx和usdt转账记录并开奖
-发放记录 发放用户奖金
-佣金记录 三级用户推广
-游戏单控 用户单控
-dapp
+TRON Hash Game Hash Quiz Hash Entertainment Support trx usdt
 
 
+This can operate stably, has undergone extensive testing, has online projects, and has detailed functional logic.
+
+Demo address (see demo picture below)
+
+To demo and buy +qq 1341494473
+
+Telegram contact https://t.me/saner22
+Telegram group view video demo https://t.me/happyhashtest
+
+Features: Support second reward usdt 3 seconds to account Self-owned system Code without backdoor docking telegram robot suitable for telegram mass promotion
+
+1. Key functions
+console statistics
+
+Bot Management Docking with Telegram Bots
+System configuration (wallet address, betting limit, odds and other settings)
+Generate vanity number Automatically generate the tail number address of trc20 quadruple or more
+Game records Monitor trx and usdt transfer records and draw prizes
+Distribution records Distribution of user bonuses
+Commission record Three-level user promotion
+
+2. Recent optimization
+
+The usdt arrival time is basically 3 seconds to the account
+
+Filter Approve Authorized Ways to Bet
+
+Middleware request filtering for key interfaces
+
+3. Installation attention
+
+CrontabController@Synchronous_transfer_data Synchronize transfer information once a second
+
+ApiController@Winning_notice Telegram winning push every 1 second
+
+ApiController@get_romaddress generates a vanity number. The execution time is used as appropriate.
+
+Testnet https://nile.trongrid.io
+
+nile usdt contract address TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj
+
+filter approve ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+
+crontabController.php/__construct filters information such as ip
+
+RSA key pair configuration crontab, appconfighot
 
 
-## 联系
 
-* 电报 https://t.me/saner22
-* qq 1341494473
-
-
-
-## 界面截图
-![dapp](https://file.ruclouds.com//i/2022/04/30/4066gm.png)
-![dapp](https://file.ruclouds.com//i/2022/04/30/406bh6.png)
-![dapp](https://file.ruclouds.com//i/2022/04/30/141pd96.png)
-![后台](https://file.ruclouds.com//i/2022/04/30/405v14.png)
-![后台](http://file.ruclouds.com//i/2022/04/30/405r37.png)
-![后台](http://file.ruclouds.com//i/2022/04/30/4064zj.png)
-![后台](http://file.ruclouds.com//i/2022/04/30/406086.png)
-![后台](http://file.ruclouds.com//i/2022/04/30/4061ti.png)
-![后台](http://file.ruclouds.com//i/2022/04/30/405yda.png)
+##Interface screenshot
+![image](http://file.ruclouds.com//i/2022/05/20/2dc1ws.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbqif.png)
+![Image](http://file.ruclouds.com//i/2022/05/20/2dbtni.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbtxe.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbhng.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbes5.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbd4u.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dbby8.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2db5pe.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2db66x.png)
+![image](http://file.ruclouds.com//i/2022/05/20/2dat10.png)
 
 
-任何使用本源码从事商业活动，对别人和自己造成损失的，本人概不负责！
+## frame
+http://www.dcatadmin.com/
 
 
+statement:
+
+This system is only used for learning and communication, please use it for business activities
+
+Please abide by local laws and regulations when using
+
+It does not bear legal responsibility for such infringements carried out by others on the website. The legal responsibility for the infringement shall be borne by the members themselves. The author who publishes the works to the theme is deemed to agree to the corresponding measures taken by the theme in the preceding paragraph.
