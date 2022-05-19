@@ -1,4 +1,4 @@
-波场哈希玩法 哈希竞猜 哈希娱乐 支持trx usdt
+波场哈希玩法 哈希竞猜 哈希娱乐 支持trx usdt（git代码只是部分 不要尝试安装 想免费体验的可以看看另外一个 https://github.com/yuanmah/hash_simple ）
 
 
 这款可稳定运营，经过大量测试 有在线项目 功能逻辑都比较细致
