@@ -68,8 +68,8 @@ RSA密钥对配置  crontab、appconfighot
 ![图片](http://file.ruclouds.com//i/2022/05/20/2dbd4u.png)
 ![图片](http://file.ruclouds.com//i/2022/05/20/2dbby8.png)
 ![图片](http://file.ruclouds.com//i/2022/05/20/2db5pe.png)
-![图片](http://file.ruclouds.com//i/2022/05/20/2db66x.png)
-![图片](http://file.ruclouds.com//i/2022/05/20/2dat10.png)
+![图片](http://file.ruclouds.com//i/2022/05/29/2f0a4x.png)
+![图片](http://file.ruclouds.com//i/2022/05/29/2f0dj9.png)
 
 
 ## 框架
