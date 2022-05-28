@@ -1,20 +1,28 @@
 波场哈希玩法 哈希竞猜 哈希娱乐 支持trx usdt（git代码只是部分 不要尝试安装 想免费体验的可以看看另外一个 https://github.com/yuanmah/hash_simple ）
 
 
-这款可稳定运营，经过大量测试 有在线项目 功能逻辑都比较细致
+近期更新:
+1、机器人交互优化
+2、后台用户信息业绩汇总
+3、多语言h5 app(应用图片底部查看) 支持简体中文、繁体中文、英文、日语、韩语、越南语 
+4、增加USDT兑换TRX监听 
+5、调整路由安全策略
+6、游戏电报群(更新中...)
+7、USDT兑换TRX(更新中...)
+8、简化部署过程
 
-演示地址(下方查看演示图片)
+演示地址(下方查看演示图片；最新更新内容、视频演示电报群查看)
 
 要演示和购买+qq 1341494473
 
 电报联系 https://t.me/saner22
+系统图片底部查看，视频查看在电报群
 电报群查看视频演示 https://t.me/happyhashtest
 
 特点：支持秒返奖 usdt 3秒到账 自有系统 代码无后门 对接电报机器人 适合电报群发推广
 
 1、关键功能
 控制台数据统计
-
 机器人管理 对接电报机器人
 系统配置(钱包地址 投注限制 赔率等设置)
 生成靓号 自动生成trc20 四连以上尾号地址
@@ -22,15 +30,8 @@
 发放记录 发放用户奖金
 佣金记录 三级用户推广
 
-2、近期优化
 
-usdt到账时间基本3秒到账
-
-过滤approve授权方式投注
-
-关键接口进行中间件请求过滤
-
-3、安装注意
+2、安装注意
 
 CrontabController@Synchronous_transfer_data  同步转账信息 1秒一次
 
@@ -51,6 +52,14 @@ RSA密钥对配置  crontab、appconfighot
 
 
 ## 界面截图
+![图片](http://file.ruclouds.com//i/2022/05/20/2azxtg.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/2azz19.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/2b00ev.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/n20m6w.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/2b0867.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/2b0cf4.png)
+![图片](http://file.ruclouds.com//i/2022/05/20/2b0f5n.png)
+
 ![图片](http://file.ruclouds.com//i/2022/05/20/2dc1ws.png)
 ![图片](http://file.ruclouds.com//i/2022/05/20/2dbqif.png)
 ![图片](http://file.ruclouds.com//i/2022/05/20/2dbtni.png)
